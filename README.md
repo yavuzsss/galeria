@@ -4,6 +4,11 @@
 you remember — *"kumsalda gün batımı"*, *"a cat curled up in a box"* — and get matching photos
 and the exact second of matching videos in milliseconds. Everything runs locally.
 
+![Searching in Turkish and English, then opening a video at the matching moment](docs/images/demo.gif)
+
+<sub>Demo on the [eval set](#eval): Wikimedia Commons photos and videos; authors and licenses
+are in [scripts/samples_manifest.json](scripts/samples_manifest.json).</sub>
+
 - **Multilingual:** one shared embedding space for images and 50+ languages (multilingual CLIP),
   so Turkish and English queries search the same index.
 - **Videos by moment:** frames are sampled every 2 s and near-duplicates dropped; a video result
@@ -15,6 +20,10 @@ and the exact second of matching videos in milliseconds. Everything runs locally
 
 Stack: Python 3.12 · FastAPI · sentence-transformers (CLIP) · FAISS · SQLite · PyAV ·
 React 19 + TypeScript + Vite · Docker.
+
+| Video results open at the matching second | Mobile |
+|---|---|
+| ![Viewer playing a video from 0:24, with every matching moment listed below](docs/images/viewer.jpg) | <img src="docs/images/mobile.jpg" alt="Search results on a phone" width="260"> |
 
 ## Architecture
 
@@ -163,7 +172,10 @@ servers.
 
 **An optional score cutoff.** Top-1 scores of answered queries range 0.273–0.372; queries with
 no match in the set top out at 0.281. A cutoff of 0.283 keeps 89% of correct top hits and hides
-all no-match queries — but that rests on six negative queries, so it is opt-in
+all no-match queries — but that rests on six negative queries, and the hits it loses are all
+Turkish: *"karda oynayan köpek"* has three correct results on top, yet scores 0.281. Turkish
+queries align less tightly with the image space, so their absolute scores run lower even when
+the ranking is right; one fixed cutoff penalizes them. The cutoff is therefore opt-in
 (`GALERIA_MIN_SCORE`, `?min_score=`, `--min-score`) rather than the default.
 
 ## API
@@ -230,8 +242,15 @@ and builds both Docker images on every push.
 - One indexing job at a time; no authentication — the API is meant for localhost or behind a
   trusted proxy.
 
-## Credits
+## License and credits
 
-Sample media: Wikimedia Commons contributors; per-file attribution is generated into
-`samples/ATTRIBUTION.md` by `make samples`. Models: [OpenAI CLIP](https://github.com/openai/CLIP)
-and [sentence-transformers](https://www.sbert.net/) multilingual distillation.
+The code is under the [MIT License](LICENSE).
+
+Sample media is not part of the repository and keeps its own licenses (CC BY, CC BY-SA, CC0,
+public domain): `make samples` downloads it and generates per-file attribution into
+`samples/ATTRIBUTION.md`. The screenshots in [docs/images](docs/images) show some of those
+photos; their authors and licenses are listed in
+[scripts/samples_manifest.json](scripts/samples_manifest.json).
+
+Models: [OpenAI CLIP](https://github.com/openai/CLIP) and the
+[sentence-transformers](https://www.sbert.net/) multilingual distillation of it.
