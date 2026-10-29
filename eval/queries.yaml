@@ -1,0 +1,79 @@
+# Eval queries. `relevant` lists tags from eval/dataset.yaml; a result is relevant when its
+# tag is listed (for the compilation video: the tag of the segment the result points at).
+# Queries paraphrase the topic instead of repeating the Commons category name.
+
+# 20 topics x (Turkish + English). Searched over everything; scored with P@3, hit@3, MRR@10.
+retrieval:
+  - {lang: tr, relevant: [cats_in_boxes], q: "karton kutunun içinde kıvrılmış kedi"}
+  - {lang: en, relevant: [cats_in_boxes], q: "a cat curled up inside a cardboard box"}
+  - {lang: tr, relevant: [dogs_in_snow], q: "karda oynayan köpek"}
+  - {lang: en, relevant: [dogs_in_snow], q: "a dog running through deep snow"}
+  - {lang: tr, relevant: [foxes_in_snow], q: "karlı arazide kızıl tilki"}
+  - {lang: en, relevant: [foxes_in_snow], q: "a red fox in a snowy field"}
+  - {lang: tr, relevant: [balloons_cappadocia], q: "Kapadokya'da gökyüzünü dolduran sıcak hava balonları"}
+  - {lang: en, relevant: [balloons_cappadocia], q: "hot air balloons floating over rocky valleys at sunrise"}
+  - {lang: tr, relevant: [waterfalls], q: "yeşil kayalıklardan dökülen şelale"}
+  - {lang: en, relevant: [waterfalls], q: "a tall waterfall plunging into a gorge"}
+  - {lang: tr, relevant: [tulip_fields], q: "sıra sıra renkli lale tarlası"}
+  - {lang: en, relevant: [tulip_fields], q: "rows of colorful tulips in a field"}
+  - {lang: tr, relevant: [trams_istanbul], q: "İstanbul sokağında kırmızı nostaljik tramvay"}
+  - {lang: en, relevant: [trams_istanbul], q: "an old red tram on a busy pedestrian street"}
+  - {lang: tr, relevant: [pizza], q: "eriyen peynirli pizza"}
+  - {lang: en, relevant: [pizza], q: "a freshly baked pizza with toppings"}
+  - {lang: tr, relevant: [latte_art], q: "köpüğünde desen olan bir fincan kahve"}
+  - {lang: en, relevant: [latte_art], q: "a heart drawn in milk foam on a latte"}
+  - {lang: tr, relevant: [fireworks], q: "gece gökyüzünde patlayan havai fişekler"}
+  - {lang: en, relevant: [fireworks], q: "fireworks exploding in the night sky"}
+  - {lang: tr, relevant: [umbrellas_rain], q: "yağmurda şemsiyeyle yürüyen insanlar"}
+  - {lang: en, relevant: [umbrellas_rain], q: "people walking with umbrellas on a rainy day"}
+  - {lang: tr, relevant: [sunset_sea], q: "denizin üzerinde gün batımı"}
+  - {lang: en, relevant: [sunset_sea], q: "the sun setting over the ocean"}
+  - {lang: tr, relevant: [lighthouses], q: "kayalık kıyıda bir deniz feneri"}
+  - {lang: en, relevant: [lighthouses], q: "a lighthouse on a rocky coastline"}
+  - {lang: tr, relevant: [libraries], q: "kitap raflarıyla dolu bir kütüphanenin içi"}
+  - {lang: en, relevant: [libraries], q: "inside a grand library with tall bookshelves"}
+  - {lang: tr, relevant: [horses_grazing], q: "çayırda otlayan atlar"}
+  - {lang: en, relevant: [horses_grazing], q: "horses eating grass in a meadow"}
+  - {lang: tr, relevant: [sea_turtles], q: "su altında yüzen deniz kaplumbağası"}
+  - {lang: en, relevant: [sea_turtles], q: "a green sea turtle swimming over a reef"}
+  - {lang: tr, relevant: [parked_bicycles], q: "yan yana park edilmiş bisikletler"}
+  - {lang: en, relevant: [parked_bicycles], q: "a row of bikes locked to a rack"}
+  - {lang: tr, relevant: [bosphorus_night], q: "gece ışıklarıyla Boğaz Köprüsü"}
+  - {lang: en, relevant: [bosphorus_night], q: "a suspension bridge lit up at night over the strait"}
+  - {lang: tr, relevant: [galata_tower], q: "Galata Kulesi"}
+  - {lang: en, relevant: [galata_tower], q: "a medieval stone tower with a conical roof above Istanbul"}
+  - {lang: tr, relevant: [simit], q: "susamlı simit"}
+  - {lang: en, relevant: [simit], q: "a Turkish sesame bread ring"}
+
+# Searched over videos only; the top result must be a video with a relevant tag.
+video:
+  - {lang: tr, relevant: [fireworks], q: "havai fişek gösterisi"}
+  - {lang: en, relevant: [fireworks], q: "a fireworks display"}
+  - {lang: tr, relevant: [waterfalls], q: "akan bir şelale"}
+  - {lang: en, relevant: [waterfalls], q: "water pouring down a waterfall"}
+  - {lang: tr, relevant: [sea_waves], q: "kıyıya vuran dalgalar"}
+  - {lang: en, relevant: [sea_waves], q: "waves washing onto a beach"}
+
+# Searched over videos only; the top result must be the compilation video, and its best
+# timestamp must fall inside the segment showing the topic.
+moments:
+  - {lang: tr, relevant: [balloons_cappadocia], q: "sıcak hava balonları"}
+  - {lang: en, relevant: [balloons_cappadocia], q: "hot air balloons in the sky"}
+  - {lang: tr, relevant: [trams_istanbul], q: "tramvay"}
+  - {lang: en, relevant: [trams_istanbul], q: "a red tram"}
+  - {lang: tr, relevant: [latte_art], q: "latte art yapılmış kahve"}
+  - {lang: en, relevant: [latte_art], q: "coffee with milk foam art"}
+  - {lang: tr, relevant: [lighthouses], q: "deniz feneri"}
+  - {lang: en, relevant: [lighthouses], q: "a lighthouse"}
+  - {lang: tr, relevant: [sea_turtles], q: "deniz kaplumbağası"}
+  - {lang: en, relevant: [sea_turtles], q: "a sea turtle"}
+
+# Nothing in the set matches these. Their top scores, against the top scores of answered
+# retrieval queries, show whether a minimum-score cutoff could hide "no match" results.
+negatives:
+  - {lang: tr, q: "fırlatma rampasında uzay mekiği"}
+  - {lang: en, q: "a space shuttle on the launch pad"}
+  - {lang: tr, q: "ameliyathanede çalışan cerrahlar"}
+  - {lang: en, q: "surgeons operating in a hospital"}
+  - {lang: tr, q: "satranç oynayan iki kişi"}
+  - {lang: en, q: "a crowded subway car during rush hour"}

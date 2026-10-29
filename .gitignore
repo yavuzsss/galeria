@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Runtime data (index, metadata, thumbnails) and downloaded media
+data/
+samples/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

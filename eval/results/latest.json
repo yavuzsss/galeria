@@ -1,0 +1,2335 @@
+{
+  "encoder": "clip-ViT-B-32+sentence-transformers/clip-ViT-B-32-multilingual-v1",
+  "vectors": 213,
+  "summary": {
+    "retrieval_all": {
+      "queries": 40,
+      "p@3": 0.9333333333333333,
+      "hit@3": 0.95,
+      "mrr@10": 0.9525
+    },
+    "retrieval_tr": {
+      "queries": 20,
+      "p@3": 0.8666666666666667,
+      "hit@3": 0.9,
+      "mrr@10": 0.905
+    },
+    "retrieval_en": {
+      "queries": 20,
+      "p@3": 1.0,
+      "hit@3": 1.0,
+      "mrr@10": 1.0
+    },
+    "video": {
+      "queries": 6,
+      "accuracy@1": 0.6666666666666666
+    },
+    "moments": {
+      "queries": 10,
+      "accuracy@1": 0.8
+    },
+    "latency_ms": {
+      "median": 6.790312472730875,
+      "p95": 7.345791033003479
+    }
+  },
+  "threshold": {
+    "suggested": 0.2832,
+    "positives_kept": 0.8947368421052632,
+    "negatives_hidden": 1.0,
+    "positive_scores": {
+      "min": 0.2728,
+      "median": 0.324,
+      "max": 0.3723
+    },
+    "negative_scores": {
+      "min": 0.2281,
+      "median": 0.2512,
+      "max": 0.2813
+    }
+  },
+  "rows": [
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "karton kutunun içinde kıvrılmış kedi",
+      "relevant": [
+        "cats_in_boxes"
+      ],
+      "top": [
+        {
+          "path": "photos/cats_in_boxes/paolo-monti-serie-fotografica-beic-6357466-88810c.jpg",
+          "timestamp": null,
+          "score": 0.3376,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        },
+        {
+          "path": "photos/cats_in_boxes/very-old-cat-user-olga007-b0474c.jpg",
+          "timestamp": null,
+          "score": 0.3263,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        },
+        {
+          "path": "photos/cats_in_boxes/chat-dans-un-bac-ikea-r-am-nag-en-maison-b03120.jpg",
+          "timestamp": null,
+          "score": 0.3221,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3376,
+      "ms": 7.526999979745597
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a cat curled up inside a cardboard box",
+      "relevant": [
+        "cats_in_boxes"
+      ],
+      "top": [
+        {
+          "path": "photos/cats_in_boxes/very-old-cat-user-olga007-b0474c.jpg",
+          "timestamp": null,
+          "score": 0.3573,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        },
+        {
+          "path": "photos/cats_in_boxes/paolo-monti-serie-fotografica-beic-6357466-88810c.jpg",
+          "timestamp": null,
+          "score": 0.3241,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        },
+        {
+          "path": "photos/cats_in_boxes/catinbox-87807a.jpg",
+          "timestamp": null,
+          "score": 0.3185,
+          "tag": "cats_in_boxes",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3573,
+      "ms": 7.016082992777228
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "karda oynayan köpek",
+      "relevant": [
+        "dogs_in_snow"
+      ],
+      "top": [
+        {
+          "path": "photos/dogs_in_snow/caroga-lake-ny-vintage-panoramio-unclevinny-0fd9fd.jpg",
+          "timestamp": null,
+          "score": 0.2813,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/dogs_in_snow/dogs-playing-in-the-snow-370503.jpg",
+          "timestamp": null,
+          "score": 0.2811,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/dogs_in_snow/german-shepherd-dog-old-scanned-photos-19-f05fa9.jpg",
+          "timestamp": null,
+          "score": 0.2801,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2813,
+      "ms": 7.247041037771851
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a dog running through deep snow",
+      "relevant": [
+        "dogs_in_snow"
+      ],
+      "top": [
+        {
+          "path": "photos/dogs_in_snow/caroga-lake-ny-vintage-panoramio-unclevinny-0fd9fd.jpg",
+          "timestamp": null,
+          "score": 0.3051,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/dogs_in_snow/what-s-this-white-stuff-53475485677-a3d394.jpg",
+          "timestamp": null,
+          "score": 0.3026,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/dogs_in_snow/pinscherpitic02-0aa810.jpg",
+          "timestamp": null,
+          "score": 0.3014,
+          "tag": "dogs_in_snow",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3051,
+      "ms": 7.442499976605177
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "karlı arazide kızıl tilki",
+      "relevant": [
+        "foxes_in_snow"
+      ],
+      "top": [
+        {
+          "path": "photos/foxes_in_snow/red-fox-on-the-hunt-9-3191495275-6cd8ea.jpg",
+          "timestamp": null,
+          "score": 0.2753,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/foxes_in_snow/cropped-6ac7b7.jpg",
+          "timestamp": null,
+          "score": 0.2669,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/foxes_in_snow/omega-park-35399855502-645880.jpg",
+          "timestamp": null,
+          "score": 0.2653,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2753,
+      "ms": 7.214082987047732
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a red fox in a snowy field",
+      "relevant": [
+        "foxes_in_snow"
+      ],
+      "top": [
+        {
+          "path": "photos/foxes_in_snow/red-fox-on-the-hunt-9-3191495275-6cd8ea.jpg",
+          "timestamp": null,
+          "score": 0.3639,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/foxes_in_snow/omega-park-35399855502-645880.jpg",
+          "timestamp": null,
+          "score": 0.3629,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        },
+        {
+          "path": "photos/foxes_in_snow/cropped-6ac7b7.jpg",
+          "timestamp": null,
+          "score": 0.3555,
+          "tag": "foxes_in_snow",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3639,
+      "ms": 7.345791033003479
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "Kapadokya'da gökyüzünü dolduran sıcak hava balonları",
+      "relevant": [
+        "balloons_cappadocia"
+      ],
+      "top": [
+        {
+          "path": "photos/balloons_cappadocia/hot-air-ballon-over-cappadocia-11-7d70ea.jpg",
+          "timestamp": null,
+          "score": 0.3287,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        },
+        {
+          "path": "photos/balloons_cappadocia/kapadokya-hot-air-ballon-ride-0a1c27.jpg",
+          "timestamp": null,
+          "score": 0.3237,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        },
+        {
+          "path": "photos/balloons_cappadocia/cappadocia-5820945305-23680a.jpg",
+          "timestamp": null,
+          "score": 0.3072,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3287,
+      "ms": 7.2104999562725425
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "hot air balloons floating over rocky valleys at sunrise",
+      "relevant": [
+        "balloons_cappadocia"
+      ],
+      "top": [
+        {
+          "path": "photos/balloons_cappadocia/balloon-flying-over-cappadocia7-0b54f0.jpg",
+          "timestamp": null,
+          "score": 0.3392,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        },
+        {
+          "path": "photos/balloons_cappadocia/hot-air-ballon-over-cappadocia-11-7d70ea.jpg",
+          "timestamp": null,
+          "score": 0.3221,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        },
+        {
+          "path": "photos/balloons_cappadocia/cappadocia-5820945305-23680a.jpg",
+          "timestamp": null,
+          "score": 0.3181,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3392,
+      "ms": 6.829583027865738
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "yeşil kayalıklardan dökülen şelale",
+      "relevant": [
+        "waterfalls"
+      ],
+      "top": [
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 38.0,
+          "score": 0.2856,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "photos/waterfalls/2008-05-17-13-35-38-iceland-brimilsvellir-8d04be.jpg",
+          "timestamp": null,
+          "score": 0.2629,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/202-svartifoss-long-exposure-timelapse-video-by-gi-84180c.webm",
+          "timestamp": 0.0,
+          "score": 0.2526,
+          "tag": "waterfalls",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2856,
+      "ms": 6.546541990246624
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a tall waterfall plunging into a gorge",
+      "relevant": [
+        "waterfalls"
+      ],
+      "top": [
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 18.0,
+          "score": 0.3486,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "photos/waterfalls/pa021850-2908203200-eacf1b.jpg",
+          "timestamp": null,
+          "score": 0.3261,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/202-svartifoss-long-exposure-timelapse-video-by-gi-84180c.webm",
+          "timestamp": 0.0,
+          "score": 0.3185,
+          "tag": "waterfalls",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3486,
+      "ms": 6.577624997589737
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "sıra sıra renkli lale tarlası",
+      "relevant": [
+        "tulip_fields"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 40.0,
+          "score": 0.265,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/fireworks/fireworks-at-home-3009587255-c49e81.jpg",
+          "timestamp": null,
+          "score": 0.2489,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/bosphorus_night/bo-azda-kutlama-gecesi-panoramio-1b68ad.jpg",
+          "timestamp": null,
+          "score": 0.2448,
+          "tag": "bosphorus_night",
+          "relevant": false
+        }
+      ],
+      "p3": 0.0,
+      "hit3": 0.0,
+      "rr": 0.1,
+      "correct": false,
+      "top_score": 0.265,
+      "ms": 6.571333040483296
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "rows of colorful tulips in a field",
+      "relevant": [
+        "tulip_fields"
+      ],
+      "top": [
+        {
+          "path": "photos/tulip_fields/panoramio-vlinder-6-edcca3.jpg",
+          "timestamp": null,
+          "score": 0.3553,
+          "tag": "tulip_fields",
+          "relevant": true
+        },
+        {
+          "path": "photos/tulip_fields/champ-de-tulipe-2006-f60c95.jpg",
+          "timestamp": null,
+          "score": 0.3548,
+          "tag": "tulip_fields",
+          "relevant": true
+        },
+        {
+          "path": "photos/tulip_fields/tulip-festival-52131510647-8a04e7.jpg",
+          "timestamp": null,
+          "score": 0.3546,
+          "tag": "tulip_fields",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3553,
+      "ms": 6.361750012729317
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "İstanbul sokağında kırmızı nostaljik tramvay",
+      "relevant": [
+        "trams_istanbul"
+      ],
+      "top": [
+        {
+          "path": "photos/trams_istanbul/istanbul-tram-caf-bar-74bf25.jpg",
+          "timestamp": null,
+          "score": 0.3713,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "photos/trams_istanbul/cars-and-streets-of-istanbul-turkey-42-52b997.jpg",
+          "timestamp": null,
+          "score": 0.3683,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "photos/trams_istanbul/istanbul-panoramio-109-992d39.jpg",
+          "timestamp": null,
+          "score": 0.3513,
+          "tag": "trams_istanbul",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3713,
+      "ms": 6.796624977141619
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "an old red tram on a busy pedestrian street",
+      "relevant": [
+        "trams_istanbul"
+      ],
+      "top": [
+        {
+          "path": "photos/trams_istanbul/istanbul-tram-caf-bar-74bf25.jpg",
+          "timestamp": null,
+          "score": 0.3331,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "photos/trams_istanbul/cars-and-streets-of-istanbul-turkey-42-52b997.jpg",
+          "timestamp": null,
+          "score": 0.3326,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "photos/trams_istanbul/istanbul-20140927134952-489482.jpg",
+          "timestamp": null,
+          "score": 0.3041,
+          "tag": "trams_istanbul",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3331,
+      "ms": 6.331207987386733
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "eriyen peynirli pizza",
+      "relevant": [
+        "pizza"
+      ],
+      "top": [
+        {
+          "path": "photos/pizza/pizza-de-r-cula-con-jam-n-y-queso-muzzarella-cebol-e1e627.jpg",
+          "timestamp": null,
+          "score": 0.3013,
+          "tag": "pizza",
+          "relevant": true
+        },
+        {
+          "path": "photos/pizza/pizza-vegetariana-on-a-wooden-rustic-table-with-ra-30734e.jpg",
+          "timestamp": null,
+          "score": 0.2865,
+          "tag": "pizza",
+          "relevant": true
+        },
+        {
+          "path": "photos/pizza/hjemmebakt-pizza-fra-lensbygda-97ecd6.jpg",
+          "timestamp": null,
+          "score": 0.285,
+          "tag": "pizza",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3013,
+      "ms": 7.2312079719267786
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a freshly baked pizza with toppings",
+      "relevant": [
+        "pizza"
+      ],
+      "top": [
+        {
+          "path": "photos/pizza/pizza-de-r-cula-con-jam-n-y-queso-muzzarella-cebol-e1e627.jpg",
+          "timestamp": null,
+          "score": 0.3036,
+          "tag": "pizza",
+          "relevant": true
+        },
+        {
+          "path": "photos/pizza/pizza-vegetariana-on-a-wooden-rustic-table-with-ra-30734e.jpg",
+          "timestamp": null,
+          "score": 0.2881,
+          "tag": "pizza",
+          "relevant": true
+        },
+        {
+          "path": "photos/pizza/hjemmebakt-pizza-fra-lensbygda-97ecd6.jpg",
+          "timestamp": null,
+          "score": 0.2867,
+          "tag": "pizza",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3036,
+      "ms": 6.4171249978244305
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "köpüğünde desen olan bir fincan kahve",
+      "relevant": [
+        "latte_art"
+      ],
+      "top": [
+        {
+          "path": "photos/latte_art/latte-art-1-2023-11-19-cbd2a9.jpg",
+          "timestamp": null,
+          "score": 0.3036,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "photos/latte_art/apple-latte-art-5-2023-11-14-8d7b05.jpg",
+          "timestamp": null,
+          "score": 0.2867,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "photos/latte_art/coffee-art-illuminea-007f18.jpg",
+          "timestamp": null,
+          "score": 0.2826,
+          "tag": "latte_art",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3036,
+      "ms": 6.457999988924712
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a heart drawn in milk foam on a latte",
+      "relevant": [
+        "latte_art"
+      ],
+      "top": [
+        {
+          "path": "photos/latte_art/latte-art-apple-714c20.jpg",
+          "timestamp": null,
+          "score": 0.3723,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "photos/latte_art/apple-latte-art-5-2023-11-14-8d7b05.jpg",
+          "timestamp": null,
+          "score": 0.3704,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "photos/latte_art/latte-art-1-2023-11-19-cbd2a9.jpg",
+          "timestamp": null,
+          "score": 0.3494,
+          "tag": "latte_art",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3723,
+      "ms": 6.6538749961182475
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "gece gökyüzünde patlayan havai fişekler",
+      "relevant": [
+        "fireworks"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 18.0,
+          "score": 0.2728,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "photos/fireworks/fire-works-2-a2afa2.jpg",
+          "timestamp": null,
+          "score": 0.2632,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "photos/fireworks/san-diego-harbor-9286245213-a1bbbe.jpg",
+          "timestamp": null,
+          "score": 0.2528,
+          "tag": "fireworks",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2728,
+      "ms": 6.252291961573064
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "fireworks exploding in the night sky",
+      "relevant": [
+        "fireworks"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 28.0,
+          "score": 0.3268,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "photos/fireworks/fire-works-2-a2afa2.jpg",
+          "timestamp": null,
+          "score": 0.3162,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "photos/fireworks/san-diego-harbor-9286245213-a1bbbe.jpg",
+          "timestamp": null,
+          "score": 0.3065,
+          "tag": "fireworks",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3268,
+      "ms": 6.667000008746982
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "yağmurda şemsiyeyle yürüyen insanlar",
+      "relevant": [
+        "umbrellas_rain"
+      ],
+      "top": [
+        {
+          "path": "photos/umbrellas_rain/2005-3-girls-752517.jpg",
+          "timestamp": null,
+          "score": 0.3321,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        },
+        {
+          "path": "photos/umbrellas_rain/monsoon-rain-in-shanghai-20090730-2171-a798f2.jpg",
+          "timestamp": null,
+          "score": 0.3317,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        },
+        {
+          "path": "photos/umbrellas_rain/getxoko-uholdeak-makaleta-etorbidean-c3b2b3.jpg",
+          "timestamp": null,
+          "score": 0.3127,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3321,
+      "ms": 6.382749998010695
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "people walking with umbrellas on a rainy day",
+      "relevant": [
+        "umbrellas_rain"
+      ],
+      "top": [
+        {
+          "path": "photos/umbrellas_rain/2005-3-girls-752517.jpg",
+          "timestamp": null,
+          "score": 0.338,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        },
+        {
+          "path": "photos/umbrellas_rain/monsoon-rain-in-shanghai-20090730-2171-a798f2.jpg",
+          "timestamp": null,
+          "score": 0.3375,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        },
+        {
+          "path": "photos/umbrellas_rain/getxoko-uholdeak-makaleta-etorbidean-c3b2b3.jpg",
+          "timestamp": null,
+          "score": 0.3204,
+          "tag": "umbrellas_rain",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.338,
+      "ms": 6.502959004137665
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "denizin üzerinde gün batımı",
+      "relevant": [
+        "sunset_sea"
+      ],
+      "top": [
+        {
+          "path": "photos/sunset_sea/taiwan-26092618273-49faa8.jpg",
+          "timestamp": null,
+          "score": 0.2832,
+          "tag": "sunset_sea",
+          "relevant": true
+        },
+        {
+          "path": "photos/bosphorus_night/bosphorus-bridge-2022-photo-10-324866.jpg",
+          "timestamp": null,
+          "score": 0.2767,
+          "tag": "bosphorus_night",
+          "relevant": false
+        },
+        {
+          "path": "photos/sunset_sea/sunset-at-orchid-island-20100911-05-818a3b.jpg",
+          "timestamp": null,
+          "score": 0.2751,
+          "tag": "sunset_sea",
+          "relevant": true
+        }
+      ],
+      "p3": 0.6666666666666666,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2832,
+      "ms": 7.3538749711588025
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "the sun setting over the ocean",
+      "relevant": [
+        "sunset_sea"
+      ],
+      "top": [
+        {
+          "path": "photos/sunset_sea/sunset-at-orchid-island-20100911-05-818a3b.jpg",
+          "timestamp": null,
+          "score": 0.288,
+          "tag": "sunset_sea",
+          "relevant": true
+        },
+        {
+          "path": "photos/sunset_sea/taiwan-26092618273-49faa8.jpg",
+          "timestamp": null,
+          "score": 0.2862,
+          "tag": "sunset_sea",
+          "relevant": true
+        },
+        {
+          "path": "photos/sunset_sea/wanlitong-sunset-3839427672-a23010.jpg",
+          "timestamp": null,
+          "score": 0.2851,
+          "tag": "sunset_sea",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.288,
+      "ms": 6.779957970138639
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "kayalık kıyıda bir deniz feneri",
+      "relevant": [
+        "lighthouses"
+      ],
+      "top": [
+        {
+          "path": "photos/lighthouses/p-voa-de-varzim-39674055613-93ebb3.jpg",
+          "timestamp": null,
+          "score": 0.2802,
+          "tag": "lighthouses",
+          "relevant": true
+        },
+        {
+          "path": "photos/sunset_sea/sunset-at-orchid-island-20100911-05-818a3b.jpg",
+          "timestamp": null,
+          "score": 0.2785,
+          "tag": "sunset_sea",
+          "relevant": false
+        },
+        {
+          "path": "photos/lighthouses/ponta-da-baleeira-albufeira-portugal-53773651073-59d73b.jpg",
+          "timestamp": null,
+          "score": 0.2767,
+          "tag": "lighthouses",
+          "relevant": true
+        }
+      ],
+      "p3": 0.6666666666666666,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2802,
+      "ms": 6.825499993283302
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a lighthouse on a rocky coastline",
+      "relevant": [
+        "lighthouses"
+      ],
+      "top": [
+        {
+          "path": "photos/lighthouses/p-voa-de-varzim-39674055613-93ebb3.jpg",
+          "timestamp": null,
+          "score": 0.3132,
+          "tag": "lighthouses",
+          "relevant": true
+        },
+        {
+          "path": "photos/lighthouses/ponta-da-baleeira-albufeira-portugal-53773651073-59d73b.jpg",
+          "timestamp": null,
+          "score": 0.3121,
+          "tag": "lighthouses",
+          "relevant": true
+        },
+        {
+          "path": "photos/lighthouses/cycling-portugal-51804383998-738db4.jpg",
+          "timestamp": null,
+          "score": 0.302,
+          "tag": "lighthouses",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3132,
+      "ms": 6.311750039458275
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "kitap raflarıyla dolu bir kütüphanenin içi",
+      "relevant": [
+        "libraries"
+      ],
+      "top": [
+        {
+          "path": "photos/libraries/biblioth-que-du-chateau-de-barante-f78a08.jpg",
+          "timestamp": null,
+          "score": 0.2934,
+          "tag": "libraries",
+          "relevant": true
+        },
+        {
+          "path": "photos/libraries/interiorbibliobcr-jpg-0bc61c.jpg",
+          "timestamp": null,
+          "score": 0.291,
+          "tag": "libraries",
+          "relevant": true
+        },
+        {
+          "path": "photos/libraries/library-reading-neon-lights-fortepan-1337-718795.jpg",
+          "timestamp": null,
+          "score": 0.2886,
+          "tag": "libraries",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2934,
+      "ms": 6.73566700424999
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "inside a grand library with tall bookshelves",
+      "relevant": [
+        "libraries"
+      ],
+      "top": [
+        {
+          "path": "photos/libraries/biblioth-que-du-chateau-de-barante-f78a08.jpg",
+          "timestamp": null,
+          "score": 0.313,
+          "tag": "libraries",
+          "relevant": true
+        },
+        {
+          "path": "photos/libraries/interiorbibliobcr-jpg-0bc61c.jpg",
+          "timestamp": null,
+          "score": 0.3005,
+          "tag": "libraries",
+          "relevant": true
+        },
+        {
+          "path": "photos/libraries/library7794-398714.jpg",
+          "timestamp": null,
+          "score": 0.2829,
+          "tag": "libraries",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.313,
+      "ms": 6.390750000718981
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "çayırda otlayan atlar",
+      "relevant": [
+        "horses_grazing"
+      ],
+      "top": [
+        {
+          "path": "photos/horses_grazing/brown-horse-at-the-surrounding-of-tamale-ghana-4bd087.jpg",
+          "timestamp": null,
+          "score": 0.2928,
+          "tag": "horses_grazing",
+          "relevant": true
+        },
+        {
+          "path": "photos/horses_grazing/greener-grasses-brighter-lights-beautiful-horses-a-baa7d1.jpg",
+          "timestamp": null,
+          "score": 0.2916,
+          "tag": "horses_grazing",
+          "relevant": true
+        },
+        {
+          "path": "photos/horses_grazing/deux-chevaux-broutant-d7376b.jpg",
+          "timestamp": null,
+          "score": 0.2832,
+          "tag": "horses_grazing",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.2928,
+      "ms": 6.947457964997739
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "horses eating grass in a meadow",
+      "relevant": [
+        "horses_grazing"
+      ],
+      "top": [
+        {
+          "path": "photos/horses_grazing/greener-grasses-brighter-lights-beautiful-horses-a-baa7d1.jpg",
+          "timestamp": null,
+          "score": 0.306,
+          "tag": "horses_grazing",
+          "relevant": true
+        },
+        {
+          "path": "photos/horses_grazing/kencot-grazing-horse-west-oxfordshire-england-01-deef0e.jpg",
+          "timestamp": null,
+          "score": 0.298,
+          "tag": "horses_grazing",
+          "relevant": true
+        },
+        {
+          "path": "photos/horses_grazing/thuin-jpg02-e5542e.jpg",
+          "timestamp": null,
+          "score": 0.2834,
+          "tag": "horses_grazing",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.306,
+      "ms": 7.0707909762859344
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "su altında yüzen deniz kaplumbağası",
+      "relevant": [
+        "sea_turtles"
+      ],
+      "top": [
+        {
+          "path": "photos/sea_turtles/chelonia-mydas-14270162719-fef7cf.jpg",
+          "timestamp": null,
+          "score": 0.3391,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "photos/sea_turtles/chelonia-mydas-538922232-6929a6.jpg",
+          "timestamp": null,
+          "score": 0.3187,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "photos/sea_turtles/2014-11-moalboal-54-grumpy-turtle-16050145615-05a2c6.jpg",
+          "timestamp": null,
+          "score": 0.3177,
+          "tag": "sea_turtles",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3391,
+      "ms": 6.32033305009827
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a green sea turtle swimming over a reef",
+      "relevant": [
+        "sea_turtles"
+      ],
+      "top": [
+        {
+          "path": "photos/sea_turtles/chelonia-mydas-538922232-6929a6.jpg",
+          "timestamp": null,
+          "score": 0.3321,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 24.0,
+          "score": 0.3298,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "photos/sea_turtles/pe-parque-nacional-marinho-fernando-de-noronha-pra-38012a.jpg",
+          "timestamp": null,
+          "score": 0.3264,
+          "tag": "sea_turtles",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3321,
+      "ms": 6.7139589809812605
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "yan yana park edilmiş bisikletler",
+      "relevant": [
+        "parked_bicycles"
+      ],
+      "top": [
+        {
+          "path": "photos/parked_bicycles/cycle-stand-at-florence-italy-49f24f.jpg",
+          "timestamp": null,
+          "score": 0.3256,
+          "tag": "parked_bicycles",
+          "relevant": true
+        },
+        {
+          "path": "photos/parked_bicycles/parking-panoramio-roman-glukhov-35234b.jpg",
+          "timestamp": null,
+          "score": 0.3117,
+          "tag": "parked_bicycles",
+          "relevant": true
+        },
+        {
+          "path": "photos/parked_bicycles/bicycles-tied-to-a-fence-in-berlin-mitte-9f848e.jpg",
+          "timestamp": null,
+          "score": 0.3072,
+          "tag": "parked_bicycles",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3256,
+      "ms": 6.250332982745022
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a row of bikes locked to a rack",
+      "relevant": [
+        "parked_bicycles"
+      ],
+      "top": [
+        {
+          "path": "photos/parked_bicycles/cycle-stand-at-florence-italy-49f24f.jpg",
+          "timestamp": null,
+          "score": 0.3358,
+          "tag": "parked_bicycles",
+          "relevant": true
+        },
+        {
+          "path": "photos/parked_bicycles/parking-panoramio-roman-glukhov-35234b.jpg",
+          "timestamp": null,
+          "score": 0.304,
+          "tag": "parked_bicycles",
+          "relevant": true
+        },
+        {
+          "path": "photos/parked_bicycles/bicycles-tied-to-a-fence-in-berlin-mitte-9f848e.jpg",
+          "timestamp": null,
+          "score": 0.301,
+          "tag": "parked_bicycles",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3358,
+      "ms": 6.485374993644655
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "gece ışıklarıyla Boğaz Köprüsü",
+      "relevant": [
+        "bosphorus_night"
+      ],
+      "top": [
+        {
+          "path": "photos/bosphorus_night/istanbul-bogazici-bridge-panoramio-49f859.jpg",
+          "timestamp": null,
+          "score": 0.3224,
+          "tag": "bosphorus_night",
+          "relevant": true
+        },
+        {
+          "path": "photos/bosphorus_night/bo-azda-kutlama-gecesi-panoramio-1b68ad.jpg",
+          "timestamp": null,
+          "score": 0.3155,
+          "tag": "bosphorus_night",
+          "relevant": true
+        },
+        {
+          "path": "photos/bosphorus_night/15-july-martyrs-bridge-at-night-52fa31.jpg",
+          "timestamp": null,
+          "score": 0.3105,
+          "tag": "bosphorus_night",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3224,
+      "ms": 6.539875001180917
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a suspension bridge lit up at night over the strait",
+      "relevant": [
+        "bosphorus_night"
+      ],
+      "top": [
+        {
+          "path": "photos/bosphorus_night/istanbul-bogazici-bridge-panoramio-49f859.jpg",
+          "timestamp": null,
+          "score": 0.3141,
+          "tag": "bosphorus_night",
+          "relevant": true
+        },
+        {
+          "path": "photos/bosphorus_night/bo-azda-kutlama-gecesi-panoramio-1b68ad.jpg",
+          "timestamp": null,
+          "score": 0.3044,
+          "tag": "bosphorus_night",
+          "relevant": true
+        },
+        {
+          "path": "photos/bosphorus_night/15-july-martyrs-bridge-at-night-52fa31.jpg",
+          "timestamp": null,
+          "score": 0.3044,
+          "tag": "bosphorus_night",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3141,
+      "ms": 6.227667036000639
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "Galata Kulesi",
+      "relevant": [
+        "galata_tower"
+      ],
+      "top": [
+        {
+          "path": "photos/galata_tower/galata-kulesi-2026-02-15-00-30-03-1790963100-0149bd.jpg",
+          "timestamp": null,
+          "score": 0.3011,
+          "tag": "galata_tower",
+          "relevant": true
+        },
+        {
+          "path": "photos/galata_tower/galata-kulesi-2026-10-10-15-04-11-1791744131-4d8ba8.jpg",
+          "timestamp": null,
+          "score": 0.2949,
+          "tag": "galata_tower",
+          "relevant": true
+        },
+        {
+          "path": "photos/galata_tower/galata-tower-istanbul-turkiye-7b3afc.jpg",
+          "timestamp": null,
+          "score": 0.2844,
+          "tag": "galata_tower",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3011,
+      "ms": 7.229583978187293
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a medieval stone tower with a conical roof above Istanbul",
+      "relevant": [
+        "galata_tower"
+      ],
+      "top": [
+        {
+          "path": "photos/galata_tower/galata-kulesi-2026-02-15-00-30-03-1790963100-0149bd.jpg",
+          "timestamp": null,
+          "score": 0.3591,
+          "tag": "galata_tower",
+          "relevant": true
+        },
+        {
+          "path": "photos/galata_tower/galata-kulesi-2026-10-10-15-04-11-1791744131-4d8ba8.jpg",
+          "timestamp": null,
+          "score": 0.3464,
+          "tag": "galata_tower",
+          "relevant": true
+        },
+        {
+          "path": "photos/galata_tower/pxl-20241210-151125145-long-exposure-03-cover-gala-d59d31.jpg",
+          "timestamp": null,
+          "score": 0.3429,
+          "tag": "galata_tower",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3591,
+      "ms": 6.317584018688649
+    },
+    {
+      "section": "retrieval",
+      "lang": "tr",
+      "q": "susamlı simit",
+      "relevant": [
+        "simit"
+      ],
+      "top": [
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2466,
+          "tag": "sea_waves",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2434,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 0.0,
+          "score": 0.2424,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": 0.0,
+      "hit3": 0.0,
+      "rr": 0.0,
+      "correct": false,
+      "top_score": 0.2466,
+      "ms": 7.047125021927059
+    },
+    {
+      "section": "retrieval",
+      "lang": "en",
+      "q": "a Turkish sesame bread ring",
+      "relevant": [
+        "simit"
+      ],
+      "top": [
+        {
+          "path": "photos/simit/i-zmir-gevre-i-3ce1a2.jpg",
+          "timestamp": null,
+          "score": 0.3563,
+          "tag": "simit",
+          "relevant": true
+        },
+        {
+          "path": "photos/simit/turkish-tea-and-simit-479940.jpg",
+          "timestamp": null,
+          "score": 0.3238,
+          "tag": "simit",
+          "relevant": true
+        },
+        {
+          "path": "photos/simit/simit-vendor-next-to-checkpoint-nicosia-72c694.jpg",
+          "timestamp": null,
+          "score": 0.3108,
+          "tag": "simit",
+          "relevant": true
+        }
+      ],
+      "p3": 1.0,
+      "hit3": 1.0,
+      "rr": 1.0,
+      "correct": true,
+      "top_score": 0.3563,
+      "ms": 6.853832979686558
+    },
+    {
+      "section": "video",
+      "lang": "tr",
+      "q": "havai fişek gösterisi",
+      "relevant": [
+        "fireworks"
+      ],
+      "top": [
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2588,
+          "tag": "sea_waves",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2499,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 38.0,
+          "score": 0.2394,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": false,
+      "top_score": 0.2588,
+      "ms": 6.915540958289057
+    },
+    {
+      "section": "video",
+      "lang": "en",
+      "q": "a fireworks display",
+      "relevant": [
+        "fireworks"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 28.0,
+          "score": 0.3213,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/downtown-buffalo-christmas-tree-lighting-20221210--267cf8.webm",
+          "timestamp": 14.0,
+          "score": 0.2881,
+          "tag": "fireworks",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2386,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3213,
+      "ms": 6.9504160201177
+    },
+    {
+      "section": "video",
+      "lang": "tr",
+      "q": "akan bir şelale",
+      "relevant": [
+        "waterfalls"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2408,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 0.0,
+          "score": 0.2393,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2372,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": false,
+      "top_score": 0.2408,
+      "ms": 6.660290993750095
+    },
+    {
+      "section": "video",
+      "lang": "en",
+      "q": "water pouring down a waterfall",
+      "relevant": [
+        "waterfalls"
+      ],
+      "top": [
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 18.0,
+          "score": 0.3313,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/202-svartifoss-long-exposure-timelapse-video-by-gi-84180c.webm",
+          "timestamp": 0.0,
+          "score": 0.2983,
+          "tag": "waterfalls",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2932,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3313,
+      "ms": 7.262375031132251
+    },
+    {
+      "section": "video",
+      "lang": "tr",
+      "q": "kıyıya vuran dalgalar",
+      "relevant": [
+        "sea_waves"
+      ],
+      "top": [
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 0.0,
+          "score": 0.285,
+          "tag": "sea_waves",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/beach-of-novosibirsk-reservoir-2-1fbc85.webm",
+          "timestamp": 0.0,
+          "score": 0.2618,
+          "tag": "sea_waves",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2418,
+          "tag": "fireworks",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.285,
+      "ms": 6.3154170056805015
+    },
+    {
+      "section": "video",
+      "lang": "en",
+      "q": "waves washing onto a beach",
+      "relevant": [
+        "sea_waves"
+      ],
+      "top": [
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 0.0,
+          "score": 0.3003,
+          "tag": "sea_waves",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/beach-of-novosibirsk-reservoir-2-1fbc85.webm",
+          "timestamp": 16.0,
+          "score": 0.2631,
+          "tag": "sea_waves",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2253,
+          "tag": "fireworks",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3003,
+      "ms": 6.947707966901362
+    },
+    {
+      "section": "moments",
+      "lang": "tr",
+      "q": "sıcak hava balonları",
+      "relevant": [
+        "balloons_cappadocia"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 0.0,
+          "score": 0.2663,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 40.0,
+          "score": 0.266,
+          "tag": "waterfalls",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 38.0,
+          "score": 0.261,
+          "tag": "fireworks",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.2663,
+      "ms": 6.965875043533742
+    },
+    {
+      "section": "moments",
+      "lang": "en",
+      "q": "hot air balloons in the sky",
+      "relevant": [
+        "balloons_cappadocia"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 38.0,
+          "score": 0.2748,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 40.0,
+          "score": 0.2663,
+          "tag": "waterfalls",
+          "relevant": false
+        },
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 0.0,
+          "score": 0.2656,
+          "tag": "balloons_cappadocia",
+          "relevant": true
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": false,
+      "top_score": 0.2748,
+      "ms": 6.81120902299881
+    },
+    {
+      "section": "moments",
+      "lang": "tr",
+      "q": "tramvay",
+      "relevant": [
+        "trams_istanbul"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 6.0,
+          "score": 0.2833,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 40.0,
+          "score": 0.2472,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/downtown-buffalo-christmas-tree-lighting-20221210--267cf8.webm",
+          "timestamp": 6.0,
+          "score": 0.2287,
+          "tag": "fireworks",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.2833,
+      "ms": 7.480125001166016
+    },
+    {
+      "section": "moments",
+      "lang": "en",
+      "q": "a red tram",
+      "relevant": [
+        "trams_istanbul"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 6.0,
+          "score": 0.2698,
+          "tag": "trams_istanbul",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 40.0,
+          "score": 0.2551,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/downtown-buffalo-christmas-tree-lighting-20221210--267cf8.webm",
+          "timestamp": 4.0,
+          "score": 0.2264,
+          "tag": "fireworks",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.2698,
+      "ms": 6.832041020970792
+    },
+    {
+      "section": "moments",
+      "lang": "tr",
+      "q": "latte art yapılmış kahve",
+      "relevant": [
+        "latte_art"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 12.0,
+          "score": 0.3009,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2204,
+          "tag": "sea_waves",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 0.0,
+          "score": 0.2034,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3009,
+      "ms": 6.717292009852827
+    },
+    {
+      "section": "moments",
+      "lang": "en",
+      "q": "coffee with milk foam art",
+      "relevant": [
+        "latte_art"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 12.0,
+          "score": 0.2853,
+          "tag": "latte_art",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 2.002,
+          "score": 0.2269,
+          "tag": "sea_waves",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 38.0,
+          "score": 0.2056,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.2853,
+      "ms": 6.783999968320131
+    },
+    {
+      "section": "moments",
+      "lang": "tr",
+      "q": "deniz feneri",
+      "relevant": [
+        "lighthouses"
+      ],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2623,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 18.0,
+          "score": 0.2574,
+          "tag": "lighthouses",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 0.0,
+          "score": 0.2413,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": false,
+      "top_score": 0.2623,
+      "ms": 7.120167021639645
+    },
+    {
+      "section": "moments",
+      "lang": "en",
+      "q": "a lighthouse",
+      "relevant": [
+        "lighthouses"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 18.0,
+          "score": 0.2685,
+          "tag": "lighthouses",
+          "relevant": true
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 42.0,
+          "score": 0.2338,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "videos/sea_waves/adam-screekrd-cravenco-92bbb4.webm",
+          "timestamp": 10.01,
+          "score": 0.2292,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.2685,
+      "ms": 7.085999997798353
+    },
+    {
+      "section": "moments",
+      "lang": "tr",
+      "q": "deniz kaplumbağası",
+      "relevant": [
+        "sea_turtles"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 24.0,
+          "score": 0.3079,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 34.0,
+          "score": 0.2544,
+          "tag": "waterfalls",
+          "relevant": false
+        },
+        {
+          "path": "videos/sea_waves/beach-of-novosibirsk-reservoir-2-1fbc85.webm",
+          "timestamp": 8.0,
+          "score": 0.2352,
+          "tag": "sea_waves",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3079,
+      "ms": 6.702540966216475
+    },
+    {
+      "section": "moments",
+      "lang": "en",
+      "q": "a sea turtle",
+      "relevant": [
+        "sea_turtles"
+      ],
+      "top": [
+        {
+          "path": "videos/compilation/compilation.mp4",
+          "timestamp": 24.0,
+          "score": 0.3142,
+          "tag": "sea_turtles",
+          "relevant": true
+        },
+        {
+          "path": "videos/sea_waves/beach-of-novosibirsk-reservoir-2-1fbc85.webm",
+          "timestamp": 8.0,
+          "score": 0.2471,
+          "tag": "sea_waves",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 34.0,
+          "score": 0.2316,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": true,
+      "top_score": 0.3142,
+      "ms": 7.061458949465305
+    },
+    {
+      "section": "negatives",
+      "lang": "tr",
+      "q": "fırlatma rampasında uzay mekiği",
+      "relevant": [],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 22.0,
+          "score": 0.2812,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/balloons_cappadocia/333-cappadocia1-57171c.jpg",
+          "timestamp": null,
+          "score": 0.2709,
+          "tag": "balloons_cappadocia",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 40.0,
+          "score": 0.2626,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2812,
+      "ms": 6.34683296084404
+    },
+    {
+      "section": "negatives",
+      "lang": "en",
+      "q": "a space shuttle on the launch pad",
+      "relevant": [],
+      "top": [
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 44.0,
+          "score": 0.2813,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/fireworks/fire-works-2-a2afa2.jpg",
+          "timestamp": null,
+          "score": 0.2458,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/balloons_cappadocia/333-cappadocia1-57171c.jpg",
+          "timestamp": null,
+          "score": 0.2423,
+          "tag": "balloons_cappadocia",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2813,
+      "ms": 7.103499956429005
+    },
+    {
+      "section": "negatives",
+      "lang": "tr",
+      "q": "ameliyathanede çalışan cerrahlar",
+      "relevant": [],
+      "top": [
+        {
+          "path": "photos/trams_istanbul/cars-and-streets-of-istanbul-turkey-42-52b997.jpg",
+          "timestamp": null,
+          "score": 0.2281,
+          "tag": "trams_istanbul",
+          "relevant": false
+        },
+        {
+          "path": "photos/libraries/library-reading-neon-lights-fortepan-1337-718795.jpg",
+          "timestamp": null,
+          "score": 0.228,
+          "tag": "libraries",
+          "relevant": false
+        },
+        {
+          "path": "videos/waterfalls/base-jumping-in-indonesia-waterfall-sipiso-piso-2a3ff6.webm",
+          "timestamp": 0.0,
+          "score": 0.2229,
+          "tag": "waterfalls",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2281,
+      "ms": 6.458749994635582
+    },
+    {
+      "section": "negatives",
+      "lang": "en",
+      "q": "surgeons operating in a hospital",
+      "relevant": [],
+      "top": [
+        {
+          "path": "photos/libraries/library-reading-neon-lights-fortepan-1337-718795.jpg",
+          "timestamp": null,
+          "score": 0.2365,
+          "tag": "libraries",
+          "relevant": false
+        },
+        {
+          "path": "photos/parked_bicycles/cycle-stand-at-florence-italy-49f24f.jpg",
+          "timestamp": null,
+          "score": 0.221,
+          "tag": "parked_bicycles",
+          "relevant": false
+        },
+        {
+          "path": "photos/libraries/biblioth-que-du-chateau-de-barante-f78a08.jpg",
+          "timestamp": null,
+          "score": 0.2114,
+          "tag": "libraries",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2365,
+      "ms": 6.82166701881215
+    },
+    {
+      "section": "negatives",
+      "lang": "tr",
+      "q": "satranç oynayan iki kişi",
+      "relevant": [],
+      "top": [
+        {
+          "path": "photos/umbrellas_rain/2005-3-girls-752517.jpg",
+          "timestamp": null,
+          "score": 0.2356,
+          "tag": "umbrellas_rain",
+          "relevant": false
+        },
+        {
+          "path": "photos/trams_istanbul/istanbul-street-32597915-565c45.jpg",
+          "timestamp": null,
+          "score": 0.2308,
+          "tag": "trams_istanbul",
+          "relevant": false
+        },
+        {
+          "path": "photos/libraries/library-reading-neon-lights-fortepan-1337-718795.jpg",
+          "timestamp": null,
+          "score": 0.2253,
+          "tag": "libraries",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2356,
+      "ms": 7.0914580137468874
+    },
+    {
+      "section": "negatives",
+      "lang": "en",
+      "q": "a crowded subway car during rush hour",
+      "relevant": [],
+      "top": [
+        {
+          "path": "photos/trams_istanbul/eminonu-tram-at-night-istanbul-2026-3650aa.jpg",
+          "timestamp": null,
+          "score": 0.2659,
+          "tag": "trams_istanbul",
+          "relevant": false
+        },
+        {
+          "path": "videos/fireworks/new-year-s-eve-london-fireworks-20-21-02-d6d53d.webm",
+          "timestamp": 40.0,
+          "score": 0.2588,
+          "tag": "fireworks",
+          "relevant": false
+        },
+        {
+          "path": "photos/trams_istanbul/istanbul-20140927134952-489482.jpg",
+          "timestamp": null,
+          "score": 0.2495,
+          "tag": "trams_istanbul",
+          "relevant": false
+        }
+      ],
+      "p3": null,
+      "hit3": null,
+      "rr": null,
+      "correct": null,
+      "top_score": 0.2659,
+      "ms": 6.242667033802718
+    }
+  ]
+}

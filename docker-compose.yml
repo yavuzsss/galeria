@@ -1,0 +1,33 @@
+# docker compose up --build    then open http://localhost:8080
+#
+# MEDIA_DIR is the folder to search (mounted read-only at /media). Defaults to the eval
+# samples; point it at your own library with e.g.  MEDIA_DIR=~/Pictures docker compose up
+
+services:
+  backend:
+    build: ./backend
+    environment:
+      GALERIA_ALLOWED_ROOTS: '["/media"]'
+      # Uncomment to hide weak matches (see eval/results/latest.md for how 0.28 was chosen).
+      # GALERIA_MIN_SCORE: "0.28"
+    volumes:
+      - ${MEDIA_DIR:-./samples}:/media:ro
+      - galeria-data:/data
+      - galeria-models:/models
+    # Not published to the host: the browser reaches it only through the frontend's /api proxy.
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  galeria-data:
+  galeria-models:

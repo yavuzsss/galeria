@@ -1,0 +1,45 @@
+# Evaluation dataset definition. Every sample comes from a curated Wikimedia Commons category,
+# so relevance labels are not hand-guessed: a file is relevant to a query when its tag is in
+# the query's `relevant` list. scripts/build_manifest.py turns this into
+# scripts/samples_manifest.json (pinned URLs, licenses, authors, sha256).
+
+source: Wikimedia Commons
+photos_per_tag: 7
+image_width: 1024 # download Commons' scaled rendition, not multi-megapixel originals
+
+photos:
+  cats_in_boxes: Cats in boxes
+  dogs_in_snow: Dogs in snow
+  foxes_in_snow: Vulpes vulpes in snow # hard negative for dogs_in_snow
+  balloons_cappadocia: Hot air balloons over Cappadocia
+  waterfalls: Waterfalls in Iceland
+  tulip_fields: Tulip fields
+  trams_istanbul: Trams in Istanbul
+  pizza: Pizzas
+  latte_art: Latte art
+  fireworks: Fireworks
+  umbrellas_rain: People holding umbrellas in the rain
+  sunset_sea: Seascapes at sunset in Taiwan
+  lighthouses: Lighthouses in Portugal
+  libraries: Interiors of libraries
+  horses_grazing: Grazing horses
+  sea_turtles: Chelonia mydas
+  parked_bicycles: Parked bicycles
+  bosphorus_night: Bosphorus Bridge at night # hard negative for galata_tower (both Istanbul)
+  galata_tower: Galata Tower
+  simit: Simit
+
+# Real videos, labelled with the same tags as photos where the topic overlaps.
+videos:
+  per_tag: 2
+  max_seconds: 60
+  tags:
+    fireworks: Videos of fireworks
+    waterfalls: Videos of waterfalls
+    sea_waves: Videos of water waves
+
+# A synthetic video stitched from held-out photos (not in the photo set) with known segments,
+# used to measure whether search lands on the right *moment* inside a video.
+compilation:
+  seconds_per_segment: 6
+  tags: [balloons_cappadocia, trams_istanbul, latte_art, lighthouses, sea_turtles]

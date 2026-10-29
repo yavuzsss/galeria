@@ -1,0 +1,18 @@
+# Commons categories are curated but not perfect. Every downloaded photo was looked at; these
+# files are in their category without showing the topic. They stay in the index as
+# distractors, but count as relevant to no query. Everything else keeps its category's label.
+
+- path: photos/pizza/02026-0516-ice-cream-supremacy-c81dbc.jpg
+  reason: street crowd holding a "Pizza" sign; no pizza in the picture
+- path: photos/libraries/hku-pokfulam-compus-main-library-building-interior-732fac.jpg
+  reason: sculptures and a direction sign in a library lobby; no books or shelves
+- path: photos/libraries/seanchai-library-32668791244-78398f.jpg
+  reason: a virtual-world (Second Life) library building seen from outside
+- path: photos/simit/fbffdf.jpg
+  reason: Bavarian pretzels, not simit (a useful hard negative for the simit queries)
+
+# Checked and kept: balloons_cappadocia 333-cappadocia1 (a balloon over the rocks),
+# waterfalls iceland-nara-68155179 (a thin waterfall on the left of an old print),
+# cats_in_boxes castello-sforzesco and liger-cat (both show a cat in a box).
+# Video note: the Buffalo tree-lighting video is in "Videos of fireworks", but fireworks are
+# only briefly visible; it keeps its label.
